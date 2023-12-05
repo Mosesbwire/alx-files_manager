@@ -1,16 +1,19 @@
-import redisClient from './utils/redis';
+// import Buffer from 'buffer';
+// import { hashPassword, comparePassword } from './utils/encryption';
 
-(async () => {
-  console.log(redisClient.isAlive());
-  console.log(await redisClient.get('myKey'));
-  await redisClient.set('myKey', 12, 5);
-  console.log(await redisClient.get('myKey'));
+// async function run() {
+//   const data = await hashPassword('password');
+//   const res = await comparePassword('password', data.cipherText, data.initVector, data.tag);
+//   console.log(res);
+// }
 
-  setTimeout(async () => {
-    console.log(await redisClient.get('myKey'));
-  }, 1000 * 10);
-})();
+// const stringToencode = 'mosesbwire:password';
+// const encodedString = Buffer.Buffer.from(stringToencode).toString('base64');
+// const decodeString = Buffer.Buffer.from(encodedString, 'base64').toString('utf-8');
+// console.log(encodedString);
 
-setTimeout(() => {
-  console.log(redisClient.isAlive());
-}, 1000 * 20);
+// console.log(decodeString);
+
+// import fs from 'node:fs';
+// import os from 'node:os';
+// import path from 'node:path';
